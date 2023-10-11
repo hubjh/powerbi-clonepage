@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="./css/announcement-banner.css">
 <style>
     /* common */
-    /* * {
+    * {
         border: 1px solid black;
-    } */
+    }
 
     #main-content {
     font-size: 15px;
@@ -64,7 +64,6 @@
 
     .shadow-board {
         box-shadow: 3px 3px 10px #999;
-        
     }
 
     /* work */
@@ -72,6 +71,44 @@
     .introduction h1 {
         font-size: 32px;
     }
+    .introduction-video {
+        width: 500px;
+        padding: 10px;
+        background-color: aqua;
+        border-radius: 2%;
+        
+    }
+
+    .introduction-flex-container {
+        display: flex;
+    }
+
+    .introduction-flex-item {
+        margin-right: 30px;
+    }
+
+    .powerbi-001 {
+        width: 100%;
+        height: auto;
+        max-width: 20000px;
+        object-fit: scale-down;
+        padding: 10px;
+        background-color: aqua;
+        border-radius: 2%;
+    }
+
+    .powerbi-001-flex-container {
+        display: flex;
+        align-items: center;
+        margin: 0px 85px;
+    }
+
+    .powerbi-001-flex-item {
+        margin: 0 45px;
+
+    }
+/*  */
+
 
 
 
@@ -141,8 +178,54 @@
             <div class="text-align-center">
                 <h1>Power BI의 Copilot 소개</h1>
             </div>
-
+            <div class="flex-container">
+                <div class="flex-item">
+                    <p><video class="introduction-video" src="./videos/0a36e579-6a81-4d4a-83f9-942295e3_6750.mp4"></video></p>
+                </div>
+                <div class="flex-item">
+                    <h3>빠르게 영향력 있는 보고서 생성</h3>
+                    <p>Power BI의 Copilot으로 차세대 AI 도구를 사용해 데이터의 잠재력을 최대한 활용하세요. 
+                        필요한 인사이트를 설명하거나 데이터에 대해 질문하면 Copilot이 분석하여 보고서로 
+                        적절한 데이터를 가져와 데이터를 실행 가능한 인사이트로 쉽게 전환해줍니다.</p>
+                    <div class="introduction-flex-container">
+                        <div class="introduction-flex-item">
+                            <p><a href="#">Copilot 자세히 알아보기</a> ></p>
+                        </div>
+                        <div class="introduction-flex-item">
+                            <p><a href="#">실행 중인 Copilot 시청하기</a> ></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-align-center">
+                <h1>모두를 위한 비즈니스 인텔리전스로 데이터 기반 문화 구축</h1>
+                <p>조직 내 모든 수준의 모든 사용자가 최신 분석을 사용하여 자신 있게 결정할 수 있도록 하세요.</p>
+            </div>
+            <div class="powerbi-001-flex-container">
+                <div class="powerbi-001-flex-item">
+                    <div>
+                        <div>
+                            <h3>신뢰할 수 있는 안전한 허브에서 데이터의 중앙 집중화</h3>
+                            <p>모든 데이터 원본으로 쉽게 데이터세트를 만들어 Power BI 데이터 허브에 추가한 다음 
+                                모든 데이터에 대해 접근 가능한 단일 정보 소스로 만듭니다.</p>
+                        </div>
+                        <div>
+                            <h3>시각적 개체를 통해 실행 가능한 인사이트 발견</h3>
+                            <p>업계 최고의 AI 기반 데이터 분석 도구와 간편한 끌어서 놓기 보고서 캔버스를 사용해 
+                                원시 데이터를 멋진 시각적 개체로 변환하세요.</p>
+                        </div>
+                        <div>
+                            <h3>팀 전체에 영향을 주는 인사이트로 변환</h3>
+                            <p>데이터를 보호하고 이미 사용 중인 Microsoft 365와 같은 앱에 인사이트를 삽입하여 의사 결정에 활용하세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="powerbi-001-flex-item">
+                    <img class=" powerbi-001" src="./images/powerbi-001.jpg" alt="powerbi-001">
+                </div>
+            </div>
         </section>
+
 
     </div> <!-- main-cotent -->
     

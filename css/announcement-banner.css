@@ -33,10 +33,11 @@ div.hero-img-text p {
 
 .flex-container {
     display: flex;
+    align-items: center;
     margin: 20px 100px;
-}
+    }
 
 .flex-item {
-    margin: 0 50px;
-
-}
+    margin: 0 45px;
+    padding: 10px;
+    }
