@@ -1,0 +1,25 @@
+nav.topmenu li.topmenu-item {
+    list-style-type: none;
+    float:left;
+    margin: 10px;
+}
+
+div.left-tab {
+    float: left;
+    margin-right: 10px; 
+}
+
+div.right-tab {
+    float: right;
+    margin-left: 10px; 
+}
+
+div.right-tab > li.topmenu-item {
+    float: left;
+}
+
+nav.topmenu::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
