@@ -8,31 +8,72 @@
 <link rel="stylesheet" href="./css/announcement-banner.css">
 <style>
     /* common */
-    * {
+    /* * {
         border: 1px solid black;
+    } */
+
+    #main-content {
+    font-size: 15px;
     }
     
     div.text-align-center {
         text-align: center;
     }
 
+    div.container {
+        position: relative;
+    }
+
+    a:link {
+        text-decoration: none;
+        color: black;
+    }
+    a:visited {
+        text-decoration: none;
+        color: black;
+    }
+
+    .black-button {
+        background-color: black;
+        padding: 1rem;
+        color: white;
+        border: none;
+    }
+    .black-button > a {
+        color: white;
+    }
+
+    .white-button {
+        background-color: white;
+        padding: 1rem;
+        color: black;
+    }
+
+    .white-button  > a {
+        color: black;
+    }
+
+    button.black-button {
+        border: 0.1px solid;
+    }
+
+    button.white-button {
+        border: 0.1px solid;
+        padding: 0.97rem;
+    }
+
+    .shadow-board {
+        box-shadow: 3px 3px 10px #999;
+        
+    }
+
     /* work */
-    div.hero-img img{
-        width: 1400px;
-        height: 800px;
-        object-fit: cover;
+
+    .introduction h1 {
+        font-size: 32px;
     }
 
-    div.hero-img-text h1 {
-        font-size: 55px;
-    }
 
-    div.hero-img-text p {
-        font-size: 20px;
-        word-wrap: break-word;
-        width: 820px;
-        margin: 0 auto;
-    }
 
     
 
@@ -41,46 +82,70 @@
 
 </style>
 <body>
-    <nav class="topmenu">
-        <div class="left-tab">
-            <li class="topmenu-item"><a href="#">Microsoft HOME</a></li>
-            <li class="topmenu-item">|</li>
-            <li class="topmenu-item"><a href="#">Power BI</a></li>
-            <li class="topmenu-item">개요</li>
-            <li class="topmenu-item">제품</li>
-            <li class="topmenu-item">가격</li>
-            <li class="topmenu-item">솔루션</li>
-            <li class="topmenu-item">리소스</li>
-            <li class="topmenu-item">커뮤니티</li>
-        </div>
-        <div class="right-tab">
-            <li class="topmenu-item"><a href="#">검색</a></li>
-            <li class="topmenu-item"><a href="#">로그인</a></li>
-            <li class="topmenu-item"><a href="#">무료 체험</a></li>
-            <li class="topmenu-item"><a href="#">지금 구입</a></li>
-        </div>
-    </nav>
+    <div id="main-content">
+        <nav class="topmenu">
+            <div class="left-tab">
+                <li class="topmenu-item white-button"><a href="#">Microsoft HOME</a></li>
+                <li class="topmenu-item white-button">|</li>
+                <li class="topmenu-item white-button"><a href="#">Power BI</a></li>
+                <li class="topmenu-item white-button">개요</li>
+                <li class="topmenu-item white-button">제품</li>
+                <li class="topmenu-item white-button">가격</li>
+                <li class="topmenu-item white-button">솔루션</li>
+                <li class="topmenu-item white-button">리소스</li>
+                <li class="topmenu-item white-button">커뮤니티</li>
+            </div>
+            <div class="right-tab">
+                <li class="topmenu-item white-button"><a href="#">검색</a></li>
+                <li class="topmenu-item white-button"><a href="#">로그인</a></li>
+                <li class="topmenu-item white-button"><a href="#">무료 체험</a></li>
+                <li class="topmenu-item black-button"><a href="#">지금 구입</a></li>
+            </div>
+        </nav>
+        <!-- --------------- -->
+        <section id="announcement-banner"> 
+            <div class="text-align-center">
+                <p>Power BI 혁신 기능. 데모. Q&A. Microsoft Business Applications 출시 이벤트에 등록 ></p>
+            </div>
+        </section>
+        <!-- --------------- -->
+        <section class="shadow-board">
+            <div class="container">
+                <div class="hero-img">
+                    <img src="./images/hero_img_desktop.jpg" alt="hero_img_desktop.jpg">
+                </div>
+                <div class="hero-img-text text-align-center">
+                    <h1>데이터를 즉각적인 영향력으로 전환</h1>
+                    <p>단일 정보 소스를 생성하고, 더 강력한 인사이트를 발견하고, 이를 통해 영향력을 줄 수 있는 엔드 투 엔드
+                        BI 플랫폼을 사용하면 적은 비용으로 더 많은 작업을 수행할 수 있습니다.</p>
+                    <div class="button-group">
+                        <button class="black-button"><a href="#">무료로 시작</a> ></button>
+                        <button class="white-button"><a href="#">계정이 있으신가요? 로그인</a> ></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <p>The Forrester Wave™: Augmented BI Platforms, Q2 2023 보고서에서 Microsoft가 리더로 선정된 이유를 알아보세요.</p>
+                    <p><strong>블로그 읽기 ></strong></p>
+                </div>
+                <hr/>
+                <div class="flex-item">
+                    <p>Microsoft Build에서 발표된 Power BI의 Microsoft Fabric 및 Copilot을 포함하여 최신 Power BI 혁신에 대해 확인하세요.</p>
+                    <p><strong>블로그 읽기 ></strong></p>
+                </div>
+            </div>
+        </section>
+        <!-- --------------- -->
+        <section class="introduction">
+            <div class="text-align-center">
+                <h1>Power BI의 Copilot 소개</h1>
+            </div>
 
-    <section id="announcement-banner"> 
-        <div class="text-align-center">
-            <p>Power BI 혁신 기능. 데모. Q&A. Microsoft Business Applications 출시 이벤트에 등록 ></p>
-            <!-- <p>Power BI innovations. Demos. Q&A. Register for the Microsoft Business Applications Launch Event ></p> -->
-        </div>
-    </section>
-    <section>
-        <div class="hero-img">
-            <img src="./images/hero_img_desktop.jpg" alt="hero_img_desktop.jpg">
-        </div>
-        <div class="hero-img-text text-align-center">
-            <h1>데이터를 즉각적인 영향력으로 전환</h1>
-            <p>단일 정보 소스를 생성하고, 더 강력한 인사이트를 발견하고, 이를 통해 영향력을 줄 수 있는 엔드 투 엔드
-                BI 플랫폼을 사용하면 적은 비용으로 더 많은 작업을 수행할 수 있습니다.</p>
-                
-                <button><a href="#">무료로 시작 ></a></button>
-                <button>계정이 있으신가요? 로그인 ></button>
+        </section>
 
-        </div>
-    </section>
+    </div> <!-- main-cotent -->
+    
     
 </body>
 </html>
