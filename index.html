@@ -3,134 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <title>clonepage.powerbi.microsoft.com/ko-kr</title>
-</head>
-<link rel="stylesheet" href="./css/topmenu.css">
-<link rel="stylesheet" href="./css/announcement-banner.css">
-<style>
-    /* common */
-    /* * {
-        border: 1px solid black;
-    } */
-
-    #main-content {
-    font-size: 15px;
-    }
+    <style>
+        /* common */
+        /* * {
+            border: 1px solid black;
+        } */
+        body{
+            margin: 0;
+            padding: 0;
+        }
     
-    div.text-align-center {
-        text-align: center;
-    }
-
-    div.container {
-        position: relative;
-    }
-
-    a:link {
-        text-decoration: none;
-        color: black;
-    }
-    a:visited {
-        text-decoration: none;
-        color: black;
-    }
-
-    .black-button {
-        background-color: black;
-        padding: 1rem;
-        color: white;
-        border: none;
-    }
-    .black-button > a {
-        color: white;
-    }
-
-    .white-button {
-        background-color: white;
-        padding: 1rem;
-        color: black;
-    }
-
-    .white-button  > a {
-        color: black;
-    }
-
-    button.black-button {
-        border: 0.1px solid;
-    }
-
-    button.white-button {
-        border: 0.1px solid;
-        padding: 0.97rem;
-    }
-
-    .shadow-board {
-        box-shadow: 3px 3px 10px #999;
-    }
-
-    /* work */
-
-    .introduction h1 {
-        font-size: 32px;
-    }
-    .introduction-video {
-        width: 500px;
-        padding: 15px;
-        background-color: black;
-        border-radius: 10px;
+        #main-content {
+        font-size: 15px;
+        overflow: hidden;
+        }
         
-    }
+        .text-align-center {
+            text-align: center;
+        }
+        .topmenu {
+            margin: 0 100px;
+            padding-top: 5px;
+        }
 
-    .introduction-flex-container {
-        display: flex;
-    }
+        nav.topmenu li.topmenu-item {
+        list-style-type: none;
+        float:left;
+        }
 
-    .introduction-flex-item {
-        margin-right: 30px;
-    }
+        div.left-tab {
+            float: left;
+        }
 
-    .powerbi-001 {
-        width: 100%;
-        height: auto;
-        max-width: 20000px;
-        object-fit: scale-down;
-        padding: 15px;
-        background-color: black;
-        border-radius: 10px;
-    }
+        div.right-tab {
+            float: right;
+            margin-left: 10px; 
+        }
 
-    .powerbi-001-flex-container {
-        display: flex;
-        align-items: center;
-        margin: 0px 85px;
-    }
+        div.right-tab > li.topmenu-item {
+            float: left;
+        }
 
-    .powerbi-001-flex-item {
-        margin: 0 45px;
-
-    }
-/*  */
-
-
-
-
+        nav.topmenu::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
     
+        div.container {
+            position: relative;
+        }
+    
+        a:link {
+            text-decoration: none;
+            color:unset;
+        }
+        a:visited {
+            text-decoration: none;
+            color: unset;
+        }
+        a:hover {
+            text-decoration:underline;
+        }
+
+        .button-group button {
+            margin: 20px 10px;
+        }
+    
+        .black-button {
+            background-color: black;
+            padding: 0.9rem 1.3rem;
+            color: white;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .black-button > a {
+            color: white;
+        }
+    
+        .white-button {
+            background-color: white;
+            padding: 0.9rem 1.3rem;
+            border-style: none;
+            border-color: #ddd;
+            color: black;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+    
+        .white-button  > a {
+            color: black;
+        }
+    
+        button.black-button {
+            font-size: 16px;
+            border-width: 0.1px;
+            border-style: solid;
+        }
+    
+        button.white-button {
+            font-size: 16px;
+            border-width: 0.1px;
+            border-style: solid;
+        }
+        button.white-button-2 {
+            font-size: 16px;
+            background-color: white;
+            border-style: none;
+
+        }
+    
+        .board-shadow {
+            box-shadow: 3px 3px 10px #999;
+        }
+
+        #announcement-banner {
+        background-color: #3c3c41;
+        color: white;
+        padding: 2px;
+        }
+/* 
+        .microsoft-logo {
+            font-size: 20px;
+        } */
+
+        .microsoft-logo img {
+            width: 100px;
+        }
+
+        div.hero-img img {
+            width: 100%;
+            height: auto;
+            max-width: 1420px; /* mac m1 air 가로 최대 길이 */
+            object-fit: cover;
+        }
+        div.hero-img-gradient {
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            background: linear-gradient(white, 80%, transparent);
+
+        }
+        div.hero-img-text {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 35%;
+        }
+
+        div.hero-img-text h1 {
+            font-size: 45px;
+        }
+
+        div.hero-img-text p {
+            font-size: 18px;
+            max-width: 810px;
+            /* word-wrap: break-word; */
+            width: 82vw;
+            padding: 5px;
+            margin: 0 auto;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 100px;
+            }
+
+        .flex-item {
+            min-width: 10rem;
+            font-size: 16px;
+            padding: 0 30px;
+            }
+    
+        /* work */
+    
+        .introduction h1 {
+            margin-top: 100px;
+            font-size: 32px;
+        }
+        .introduction-video {
+            max-width: 500px;
+            width: 100vw;
+            padding: 15px;
+            background-color: black;
+            border-radius: 10px;
+            
+        }
+    
+        .introduction-flex-container {
+            display: flex;
+        }
+
+        .flex-item-max-content {
+            width: max-content;
+        }
+    
+        .introduction-flex-item {
+            margin-right: 30px;
+        }
+        .introduction-text {
+            max-width: 500px;
+        }
+    
+        .powerbi-001 {
+            max-width: 1000px;
+            width: 100vw;
+            height: auto;
+            padding: 15px;
+            align-items: center;
+            background-color: black;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+    
+        .powerbi-001-flex-container {
+            display: flex;
+            margin: 0px 10px;
+        }
+    
+        .powerbi-001-flex-item {
+            width: 30%;
+            margin: 0 10px;
+            position: relative;
+        }
+        .flex-item-left-margin {
+            max-width: 250px;
+            min-width: 100px;
+            margin-left: 100px;
+        }
+
+        .result-list {
+            margin-top: 100px;
+        }
+        .result-list-width {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid-container {
+            width:auto;
+            height: auto;
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas: 
+                "item1 item2 item3 item4 item5"
+            ;
+        }
+        .grid-item {
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+        }
+        .grid-item img {
+            width: 200px;
+            height: 100px;
+        }
+        .picture-1 {
+            grid-area: item1;
+        }
+        .picture-2 {
+            grid-area: item2;
+        }
+        .picture-3 {
+            grid-area: item3;
+        }
+        .picture-4 {
+            grid-area: item4;
+        }
+        .picture-5 {
+            grid-area: item5;
+        }
+
+        .picture-1-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .picture-1-main img {
+            max-width: 1200px;
+            width: 100vw;
+        }
+        .report-section {
+            margin-top: 60px;
+            padding: 30px 0;
+            background-color: #ebebeb;
+        }
+
+        .report-flex-container {
+            display: flex;
+            margin: 0 120px;
+            width: auto 1000px;
+            margin: 0 150px;
+        }
+        .report-flex-item-fsize {
+            font-size: 1.2rem;
+            padding: 0 50px;
+        }
+    
+        .report-flex-item {
+            margin: 0 20px;
+            align-items: left;
+        }
+
+        .report-flex-text {
+            font-size: smaller;
+            width: auto 1000px;
+            margin: 0 150px;
+        }
+
+
+        .apply-section {
+            padding: 60px 0;
+        }
+
+        .responsive-bi {
+            margin: 0 150px;
+        }
+
+
+        .simon {
+            max-width: 1120px;
+            width:fit-content;
+        }
+
+        .powerbi-examine {
+            max-width: 600px;
+        }
+
+        .app-store {
+            background-color: #75757a;
+            color: white;
+            padding: 60px 0;
+        }
+
+        .app-store-icon {
+            width: 50px;
+        }
+
+        .service-section {
+            padding: 60px 0;
+        }
+        .service-section-text {
+            width: auto 1000px;
+            margin: 0 150px;
+        }
+
+        .azure-section {
+            background-color: #3c3c41;
+            color: white;
+            padding: 60px 0;
+        }
+        .azure-section p {
+            width: auto 1000px;
+            margin: 0 150px;
+        }
+        .community-section {
+            background-color: #ebebeb;
+            padding: 60px 0;
+
+        }
+        .community-section img {
+            width: 50px;
+        }
+        .footer-background {
+            background-color: #f1f2f4;
+            /* padding: 200px 0 */
+        }
+        .footnote-text {
+            width: auto 1000px;
+            margin: 0 150px;
+            padding-top: 60px;
+            font-size: smaller;
+        }
+        .footer-flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 100px;
+            margin-top: 60px;
+
+        }
+        .footer-flex-item {
+            min-width: 10rem;
+            font-size: 16px;
+            padding: 0 50px;
+        }
+        .dividing-line {
+            border-right: 1px solid black;
+        }
 
 
 
+    </style>
+</head>
 
-</style>
+
 <body>
     <div id="main-content">
         <nav class="topmenu">
             <div class="left-tab">
-                <li class="topmenu-item white-button"><a href="#">Microsoft HOME</a></li>
-                <li class="topmenu-item white-button">|</li>
-                <li class="topmenu-item white-button"><a href="#">Power BI</a></li>
-                <li class="topmenu-item white-button">개요</li>
-                <li class="topmenu-item white-button">제품</li>
-                <li class="topmenu-item white-button">가격</li>
-                <li class="topmenu-item white-button">솔루션</li>
-                <li class="topmenu-item white-button">리소스</li>
-                <li class="topmenu-item white-button">커뮤니티</li>
+                <li class="topmenu-item white-button microsoft-logo"><a href="#"><img src="./images/RE1Mu3b.png" width="auto" height="20px" alt="microsoft-logo"></a></li>
+                <li class="topmenu-item white-button">|&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#">Power BI</a></li>
+                <li class="topmenu-item white-button"><a href="#">개요</a></li>
+                <li class="topmenu-item white-button"><a href="#">제품</a></li>
+                <li class="topmenu-item white-button"><a href="#">가격</a></li>
+                <li class="topmenu-item white-button"><a href="#">솔루션</a></li>
+                <li class="topmenu-item white-button"><a href="#">리소스</a></li>
+                <li class="topmenu-item white-button"><a href="#">커뮤니티</a></li>
             </div>
             <div class="right-tab">
                 <li class="topmenu-item white-button"><a href="#">검색</a></li>
@@ -138,17 +420,23 @@
                 <li class="topmenu-item white-button"><a href="#">무료 체험</a></li>
                 <li class="topmenu-item black-button"><a href="#">지금 구입</a></li>
             </div>
+            <!-- 드롭 다운 메뉴 필요 -->
         </nav>
+
         <!-- --------------- -->
+
         <section id="announcement-banner"> 
             <div class="text-align-center">
-                <p>Power BI 혁신 기능. 데모. Q&A. Microsoft Business Applications 출시 이벤트에 등록 ></p>
+                <p style="margin: 10px;"><a href="#">Power BI 혁신 기능. 데모. Q&A. Microsoft Business Applications 출시 이벤트에 등록</a> ></p>
             </div>
         </section>
+
         <!-- --------------- -->
-        <section class="shadow-board">
+
+        <section class="board-shadow">
             <div class="container">
                 <div class="hero-img">
+                    <div class="hero-img-gradient"></div> <!-- abus-->
                     <img src="./images/hero_img_desktop.jpg" alt="hero_img_desktop.jpg">
                 </div>
                 <div class="hero-img-text text-align-center">
@@ -162,18 +450,20 @@
                 </div>
             </div>
             <div class="flex-container">
-                <div class="flex-item">
+                <div class="flex-item dividing-line">
                     <p>The Forrester Wave™: Augmented BI Platforms, Q2 2023 보고서에서 Microsoft가 리더로 선정된 이유를 알아보세요.</p>
-                    <p><strong>블로그 읽기 ></strong></p>
+                    <p class="flex-item-max-content"><a href="#"><strong>블로그 읽기</a> ></strong></p>
                 </div>
-                <hr/>
+                <!-- <p class="dividing-line">|</p> -->
                 <div class="flex-item">
                     <p>Microsoft Build에서 발표된 Power BI의 Microsoft Fabric 및 Copilot을 포함하여 최신 Power BI 혁신에 대해 확인하세요.</p>
-                    <p><strong>블로그 읽기 ></strong></p>
+                    <p class="flex-item-max-content"><a href="#"><strong>블로그 읽기</a> ></strong></p>
                 </div>
             </div>
         </section>
+
         <!-- --------------- -->
+
         <section class="introduction">
             <div class="text-align-center">
                 <h1>Power BI의 Copilot 소개</h1>
@@ -182,17 +472,17 @@
                 <div class="flex-item">
                     <p><video class="introduction-video" src="./videos/0a36e579-6a81-4d4a-83f9-942295e3_6750.mp4" controls></video></p>
                 </div>
-                <div class="flex-item">
+                <div class="flex-item introduction-text">
                     <h3>빠르게 영향력 있는 보고서 생성</h3>
                     <p>Power BI의 Copilot으로 차세대 AI 도구를 사용해 데이터의 잠재력을 최대한 활용하세요. 
                         필요한 인사이트를 설명하거나 데이터에 대해 질문하면 Copilot이 분석하여 보고서로 
                         적절한 데이터를 가져와 데이터를 실행 가능한 인사이트로 쉽게 전환해줍니다.</p>
                     <div class="introduction-flex-container">
                         <div class="introduction-flex-item">
-                            <p><a href="#">Copilot 자세히 알아보기</a> ></p>
+                            <p class="flex-item-max-content"><a href="#"><strong>Copilot 자세히 알아보기</strong></a> ></p>
                         </div>
                         <div class="introduction-flex-item">
-                            <p><a href="#">실행 중인 Copilot 시청하기</a> ></p>
+                            <p class="flex-item-max-content"><a href="#"><strong>실행 중인 Copilot 시청하기</strong></a> ></p>
                         </div>
                     </div>
                 </div>
@@ -203,7 +493,7 @@
             </div>
             <div class="powerbi-001-flex-container">
                 <div class="powerbi-001-flex-item">
-                    <div>
+                    <div class="flex-item-left-margin">
                         <div>
                             <h3>신뢰할 수 있는 안전한 허브에서 데이터의 중앙 집중화</h3>
                             <p>모든 데이터 원본으로 쉽게 데이터세트를 만들어 Power BI 데이터 허브에 추가한 다음 
@@ -227,21 +517,250 @@
                 </div>
             </div>
         </section>
+
         <!-- --------------- -->
+
         <section class="result-list">
             <div class="text-align-center">
-                <h1>실제 고객. 성과 실현.</h1>
+                <h1>실제 고객. 성과 실현.</h1> <!-- 반응형 웹으로 모바일 크기마다 사진 크기 변경-->
             </div>
-            <div class="flex-container">
-                <div class="flex-item">1</div>
-                <div class="flex-item">2</div>
-                <div class="flex-item">3</div>
-                <div class="flex-item">4</div>
-                <div class="flex-item">5</div>
+            <div class="result-list-width">
+                <div class="grid-container">
+                    <div class="grid-item"><img class="picture-1" src="./images/swiggy.png" alt="swiggy-logo"></div>
+                    <div class="grid-item"><img class="picture-2" src="./images/fairlife.png" alt="fairlife"></div>
+                    <div class="grid-item"><img class="picture-3" src="./images/hendrick.png" alt="hendrick"></div>
+                    <div class="grid-item"><img class="picture-4" src="./images/g-t.png" alt="g-t-logo"></div>
+                    <div class="grid-item"><img class="picture-5" src="./images/pwc.png" alt="pwc-logo"></div>
+                </div>
+                <div class="picture-1-main">
+                    <img src="./images/swiggy.jpg" alt="swiggy-main">
+                </div>
             </div>
-
         </section>
 
+        <!-- --------------- -->
+
+        <section class="report-section">
+            <div>
+                <div class="text-align-center">
+                    <h1>독립 연구 회사의 의견 알아보기</h1>
+                </div>
+                <div class="report-flex-container"><!-- 독립연구 회사-->
+                    <div class="report-flex-item"><!--gartner-->
+                        <h2><img src="./images/gartner-logo-powerbi-1x.png" alt=""></h2>
+                        <p class="report-text">2023년 4월 <strong>Gartner® Magic Quadrant™ for Analytics and Business Intelligence Platforms</strong> 보고서에서 Microsoft가 비전 완성도 및 실행력 항목에서 선두 업체로 선정되었습니다.</p>
+                        <p><a href="#"><strong>보고서 읽기</a> ></strong></p>
+
+                    </div> 
+                    <div class="report-flex-item"><!-- forrester-->
+                        <h2><img src="./images/forrester-logo-powerbi-1x.png" alt=""></h2>
+                        <p class="report-text"><strong>The Forrester Wave™: Augmented Business Intelligence Platforms, Q2 2023</strong> 보고서에서 Microsoft가 전략 범주의 모든 공급업체 중 가장 높은 점수를 받은 이유를 알아보세요.</p>
+                        <p><a href="#"><strong>보고서 읽기</a> ></strong></p>
+                    </div> 
+                </div> 
+                <div class="text-align-center"><!-- 조직에 미치는 영향-->
+                    <h1>Power BI가 조직에 미치는 영향 확인하기</h1>
+                    <p>Forrester Consulting에서 실시한 Total Economic Impact™ 위탁 연구 보고서에서 기업이 Power BI를 사용하여 수익을 창출하고 비용을 절감하고 생산성을 높인 방법을 알아보세요.</p>
+                </div>
+                <div class="flex-container text-align-center"><!-- 독립연구 회사-->
+                    <div class="flex-item dividing-line report-flex-item-fsize"><!--gartner-->
+                        <h2>381%</h2>
+                        <p>3년 동안 투자 수익률 실현</p>
+                    </div> 
+                    <div class="flex-item dividing-line report-flex-item-fsize"><!-- forrester-->
+                        <h2>6개월 내에</h2>
+                        <p>투자금 회수</p>
+                    </div> 
+                    <div class="flex-item report-flex-item-fsize"><!-- forrester-->
+                        <h2>$5,684만</h2>
+                        <p>3년 동안의 순 이익</p>
+                    </div>
+                </div>
+                <div class="flex-container text-align-center">
+                    <div class="flex-item">
+                        <p><a href="#">이 연구 보고서 읽기</a> ></p> <!-- button -->
+                    </div>
+                    <div class="flex-item">
+                        <p><a href="#">연구 보고서 확인하기</a> ></p>
+                    </div>
+                </div>
+                <div class="text-align-center report-flex-text">
+                    <p>2022년 7월, Microsoft가 의뢰하고 Forrester Consulting에서 수행한 The Total Economic Impact™ of Microsoft Power BI 위탁 연구 보고서는 고객 인터뷰를 기반으로 복합 조직에 관한 조사 결과입니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------- -->
+
+        <section class="apply-section">
+            <div class="text-align-center">
+                <h1>누구나 다양한 도구를 통해 데이터 활용 능력을 크게 신장할 수 있도록 지원하세요.</h1>
+                <img class="simon" src="./images/simon.jpg" alt="simon">
+
+            </div>
+        </section>
+
+        <!-- --------------- -->
+
+        <section>
+            <div class="responsive-bi">
+                <h1>Power BI 살펴보기</h1>
+            </div>
+            <div class="flex-container button-group">
+                <div class="flex-item">
+                    <img class="powerbi-examine" src="./images/Blade8_1.jpg" alt="blade-1">
+                    <h3>Power BI 시작하기<h2>
+                    <p>더 나은 비즈니스 의사결정에 도움이 되는 의미 있는 인사이트를 데이터 내에서 빠르게 발견하세요.</p>
+                    <div class="flex-container">
+                        <div class="flex-item">
+                            <button class="black-button"><a href="#">무료로 시작</a> ></button>
+                        </div>
+                        <div class="flex-item">
+                            <button class="white-button-2"><a href="#">자세히 알아보기</a> ></button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="flex-item">
+                    <img class="powerbi-examine" src="./images/Blade8_2.jpg" alt="blade-2">
+                    <h3>Power BI Desktop 다운로드</h3>
+                    <p>시각적 분석을 제공하는 풍부한 대화형 보고서를 쉽게 만들 수 있습니다.</p>
+                    <div class="flex-container">
+                        <div class="flex-item">
+                            <button class="black-button"><a href="#">무료로 시작</a> ></button>
+                        </div>
+                        <div class="flex-item">
+                            <button class="white-button-2"><a href="#">자세히 알아보기</a> ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------- -->
+
+        <section class="app-store">
+            <div class="text-align-center">
+                <h1>언제든지 데이터 사용</h1>
+                <p>모바일 앱을 다운로드하면 이동 중에도 모바일 디바이스에서 Power BI 데이터를 확인할 수 있습니다.</p>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <a href="#"><img src="./images/apple_store.png" alt="apple-store"></a>
+                    </div> 
+                    <div class="flex-item">
+                        <a href="#"><img src="./images/google-play-badge.png" alt="google-play"></a>
+                    </div> 
+                    <div class="flex-item">
+                        <a href="#"><img src="./images/microsoft-windows.png" alt="microsoft-windows"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------- -->
+
+        <section class="service-section">
+            <div class="text-align-center button-group service-section-text">
+                <h1>단독으로 사용해도 강력하지만, 함께 사용하면 더욱 강력한 성능.</h1>
+                <p>조직 전체에서 혁신을 촉진하려면 Power Automate를 Microsoft Power Platform, Microsoft 365, Dynamics 365, Azure 및 기타 수백 가지 앱에 연결하여 강력한 엔드 투 엔드 비즈니스 솔루션을 구축하세요.</p>
+                <button class="black-button"><a href="#">자세히 알아보기</a> ></button>
+            </div>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <img class="app-store-icon" src="./images/powerapps.svg" alt="powerapps">
+                    <h3>Power Apps</h3>
+                    <p>데이터에 쉽게 연결되고, 논리 추가에 Excel과 유사한 식을 이용하고, 웹과 iOS, Android 장치에서 실행할 수 있는 앱을 단 몇 시간만에 구축하세요.</p>
+                    <p><a href="#"><strong>자세히 알아보기</strong></a> ></p>
+                </div> 
+                <div class="flex-item">
+                    <img class="app-store-icon" src="./images/powerautomate.svg" alt="powerautomate">
+                    <h3>Power Automate</h3>
+                    <p>수백 개의 인기 앱 및 서비스에 연결하는 코드 없는 방식으로 강력한 워크플로 자동화를 앱에 직접 포함합니다.</p>
+                    <p><a href="#"><strong>자세히 알아보기</strong></a> ></p>
+                </div> 
+                <div class="flex-item">
+                    <img class="app-store-icon" src="./images/powervirtualagents.svg" alt="powervirtualagents">
+                    <h3>Power Virtual Agents</h3>
+                    <p>고객, 직원과 함께 풍부한 대화를 나눌 수 있는 챗봇을 코딩 작업 없이도 쉽게 빌드할 수 있습니다.</p>
+                    <p><a href="#"><strong>자세히 알아보기</strong></a> ></p>
+                </div>
+                <div class="flex-item">
+                    <img class="app-store-icon" src="./images/powerpages.svg" alt="powerpages">
+                    <h3>Power Pages</h3>
+                    <p>사용자 지정된 로우코드 비즈니스 웹 사이트를 신속하게 구축하고 실행함으로써 데이터를 통합하고 고객을 중요한 정보 및 서비스에 연결하세요.</p>
+                    <p><a href="#"><strong>자세히 알아보기</strong></a> ></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------- -->
+
+        <section class="azure-section">
+            <div class="text-align-center">
+                <p><img src="./images/azure.svg" alt="azure"></p>
+                <h1>Azure를 통한 전체 데이터 자산 분석</h1>
+                <p>Power BI를 Azure 분석 서비스(Azure Synapse Analytics, Azure Data Lake Storage 포함)와 결합하여 전체 데이터 자산을 연결하고 분석하세요. 페타바이트 규모의 데이터를 분석하고 고급 AI 기능을 사용하며 추가적인 데이터 보호를 적용하여 조직 전체에서 인사이트를 더 쉽게 공유할 수 있습니다.</p>
+                <p><a href="#"><strong>자세히 알아보기</strong></a> ></p>
+            </div>
+        </section>
+
+        <!-- --------------- -->
+
+        <section class="community-section">
+            <div class="text-align-center">
+                <p><img src="./images/community.png" alt="community"></p>
+                <h1>지원 및 팁을 위해 커뮤니티 가입</h1>
+                <p>전 세계 Power BI 커뮤니티 구성원과 연결하여 Power BI 팀이 제공하는 유용한 팁과 조언을 얻으세요.</p>
+                <p><a href="#"><strong>자세히 알아보기</strong></a> ></p>
+            </div>
+        </section>
+
+         <!-- --------------- -->
+
+        <footer>
+            <div class="text-align-center">
+                <p class="footnote-text">Gartner, Magic Quadrant for Analytics and Business Intelligence Platforms, Kurt Schlegel, Julian Sun, David Pidsley, Anirudh Ganeshan, Fay Fei, Aura Popa, Radu Miclaus, Edgar Macari, Kevin Quinn, Christopher Long, 2023년 4월 5일.
+                    Gartner는 등록 상표 및 서비스 표시이며 Magic Quadrant는 미국 및 기타 국가에서 Gartner, Inc. 및/또는 그 자회사의 등록 상표로, 허가 하에 여기에 사용되었습니다. 모든 내용은 저작권법의 보호를 받습니다.
+                    Gartner는 자사 연구 간행물에 언급된 어떤 공급업체 또는 제품, 서비스를 추천하거나 보증하지 않으며, 기술 사용자들에게 최고 등급의 공급업체나 기타 지정된 공급업체만 선택하도록 권장하지 않습니다. Gartner 연구 간행물은 Gartner 연구 조직의 의견을 담고 있으며 사실의 진술로 해석되어서는 안 됩니다. Gartner는 이 연구와 관련하여 상품성 또는 특정 목적에 대한 적합성 보증을 비롯한 모든 명시적, 묵시적 보증을 부인합니다.</p>
+            </div>
+            <div class="footer-flex-container footer-background">
+                <div class="footer-flex-item">
+                    <p><strong>Power Platform</strong></p>
+                    <p><a href="#">개요</a></p>
+                    <p><a href="#">Power BI</a></p>
+                    <p><a href="#">Power Apps</a></p>
+                    <p><a href="#">Power pages</a></p>
+                    <p><a href="#">Power Automate</a></p>
+                    <p><a href="#">Power Virtual Agents</a></p>
+                    <p>---</p>
+                    <p><a href="#">로그인</a></p>
+                    <p><a href="#">가입</a></p>
+                </div>
+                <div class="footer-flex-item">
+                    <p><strong>찾아보기</strong></p>
+                    <p><a href="#">솔루션</a></p>
+                    <p><a href="#">컨설팅 서비스</a></p>
+                </div>
+                <div class="footer-flex-item">
+                    <p><strong>다운로드</strong></p>
+                    <p><a href="#">Power BI Desktop</a></p>
+                    <p><a href="#">Power BI 모바일</a></p>
+                    <p><a href="#">Power BI Report Server</a></p>
+                    <p><a href="#">모든 다운로드 보기</a></p>
+                </div>
+                <div class="footer-flex-item">
+                    <p><strong>학습</strong></p>
+                    <p><a href="#">단계별 학습</a></p>
+                    <p><a href="#">설명서</a></p>
+                    <p><a href="#">지원</a></p>
+                    <p><a href="#">커뮤니티</a></p>
+                    <p><a href="#">피드백 제공</a></p>
+                    <p><a href="#">웹 세미나</a></p>
+                    <p><a href="#">개발자</a></p>
+                    <p><a href="#">블로그</a></p>
+                    <p><a href="#">뉴스레터</a></p>
+                </div>
+            </div>
+        </footer>
 
     </div> <!-- main-cotent -->
     
