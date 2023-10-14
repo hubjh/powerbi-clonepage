@@ -78,6 +78,10 @@
             color: white;
             border-radius: 3px;
             box-sizing: border-box;
+            width:fit-content
+            /* @media screen and (max-width: 630px) {
+                width:fit-content
+            } */
         }
         .black-button > a {
             color: white;
@@ -177,16 +181,17 @@
             padding: 20px 100px;
             @media screen and (max-width: 630px) {
                 display:initial;
-                justify-content: center;
-                align-items: center;
             }
+        }
+        .flex-container-baseline {
+            align-items: baseline;
         }
 
 
         .flex-item {
             min-width: 10rem;
             font-size: 16px;
-            
+            padding: 0 20px;
         }
 
         .flex-item img {
@@ -571,7 +576,7 @@
             padding: 12px;
         }
 
-        .report-read-button-margin {
+        .mobile-button-margin {
             @media screen and (max-width: 630px) {
                 margin: 0 130px;
             }
@@ -636,7 +641,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-container">
+            <div class="flex-container flex-container-baseline">
                 <div class="flex-item dividing-line">
                     <p>The Forrester Wave™: Augmented BI Platforms, Q2 2023 보고서에서 Microsoft가 리더로 선정된 이유를 알아보세요.</p>
                     <p class="flex-item-max-content"><a href="#"><strong>블로그 읽기</a> ></strong></p>
@@ -763,7 +768,7 @@
                     </div>
                 </div>
                 <div class="flex-container text-align-center">
-                    <div class="flex-item report-read-button-margin">
+                    <div class="flex-item mobile-button-margin">
                         <p class="report-read-button"><a href="#">이 연구 보고서 읽기</a> ></p> <!-- button -->
                     </div>
                     <div class="flex-item">
