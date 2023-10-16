@@ -4,641 +4,157 @@
     <meta charset="UTF-8">
     <title>clonepage.powerbi.microsoft.com/ko-kr</title>
     <style>
-        :root {
-            --element-media-width : 760px;
+        .topmenu {
+            padding: 15px 0;
+            padding-top: 10px;
         }
-        /* common */
-        /* * {
-            border: 1px solid black;
-        } */
+
+        .topmenu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .topmenu ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .topmenu ul li a {
+            text-decoration: none;
+        }
+        .topmenu ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #0078D4;
+            padding: 100px;
+        }
+
+        .topmenu li:hover .submenu {
+            display:block;
+        }
+
+
         body{
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
-    
-        #main-content {
-        font-size: 15px;
-        overflow: hidden;
-        }
-        
-        .text-align-center {
-            text-align: center;
-        }
-        .topmenu {
-            margin: 0 100px;
-            padding-top: 5px;
-        }
-        nav.topmenu li.topmenu-item {
-            list-style-type: none;
-            float:left;        
-        }
-
-        div.left-tab {
-            float: left;
-        }
-
-        div.right-tab {
-            float: right;
-            margin-left: 10px; 
-        }
-
-        div.right-tab > li.topmenu-item {
-            float: left;
-        }
-
-        nav.topmenu::after {
-            content: '';
-            display: block;
-            clear: both;
-        }
-    
-        div.container {
-            position: relative;
-        }
-    
-        a:link {
-            text-decoration: none;
-            color:unset;
-        }
-        a:visited {
-            text-decoration: none;
-            color: unset;
-        }
-        a:hover {
-            text-decoration:underline;
-        }
-
-        .button-group button {
-            margin: 20px 10px;
-        }
-    
-        .black-button {
-            background-color: black;
-            padding: 0.9rem 1.3rem;
-            color: white;
-            border-radius: 3px;
-            box-sizing: border-box;
-            width:fit-content
-            /* @media screen and (max-width: 768px) {
-                width:fit-content
-            } */
-        }
-        .black-button > a {
-            color: white;
-        }
-    
-        .white-button {
-            background-color: white;
-            padding: 0.9rem 1.3rem;
-            border-style: none;
-            border-color: #ddd;
-            color: black;
-            border-radius: 3px;
-            box-sizing: border-box;
-        }
-    
-        .white-button  > a {
-            color: black;
-        }
-    
-        button.black-button {
-            font-size: 16px;
-            border-width: 0.1px;
-            border-style: solid;
-        }
-    
-        button.white-button {
-            font-size: 16px;
-            border-width: 0.1px;
-            border-style: solid;
-        }
-        button.white-button-2 {
-            font-size: 16px;
-            background-color: white;
-            border-style: none;
-
-        }
-    
-        .board-shadow {
-            box-shadow: 0px 3px 10px #999;
-        }
-
-        #announcement-banner {
-        background-color: #3c3c41;
-        color: white;
-        padding: 2px;
-        }
-
-        .microsoft-logo img {
-            width: 100px;
-        }
-
-        div.hero-img img {
-            width: 100%;
-            height: auto;
-            max-width: 1420px; /* mac m1 air 가로 최대 길이 */
-            object-fit: cover;
-            @media screen and (max-width: 768px) {
-                object-fit:inherit;
-                object-position: left center;
-                height: 800px;
-            }
-        }
-        div.hero-img-gradient {
-            width: 100%;
-            height: 50%;
-            position: absolute;
-            background: linear-gradient(white, 80%, transparent);
-
-        }
-        div.hero-img-text {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 35%;
-
-        }
-
-        div.hero-img-text h1 {
-            font-size: 45px;
-            @media screen and (max-width: 768px) {
-                margin: 60px 20px ;
-            }
-        }
-
-        div.hero-img-text p {
-            font-size: 18px;
-            max-width: 810px;
-            width: 82vw;
-            padding: 5px;
-            margin: 0 auto;
-        }
-
-        .flex-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 100px;
-            @media screen and (max-width: 768px) {
-                display:initial;
-            }
-        }
-        .flex-container-baseline {
-            align-items: baseline;
-        }
-
-
-        .flex-item {
-            min-width: 10rem;
-            font-size: 16px;
-            padding: 0 20px;
-            margin: 0 30px;
-        }
-
-        .flex-item img {
-            padding: 0 2vw;
-            @media screen and (max-width: 768px) {
-                margin-top: 20px;
-            }
-        }
-    
-        /* work */
-    
-        .introduction h1 {
-            margin-top: 100px;
-            font-size: 32px;
-        }
-        .introduction-video {
-            max-width: 40vw;
-            width: 40vw;
-            height: auto;
-            padding: 15px;
-            background-color: black;
-            border-radius: 10px;
-            @media screen and (max-width: 768px) {
-                max-width: 100vw;
-                width: 85vw;
-                margin-bottom: 20px;
-        
-            }
-        }
-
-        .flex-item-video-margin {
-            margin-right: 35vw;
-        }
-    
-        .introduction-flex-container {
-            display: flex;
-            @media screen and (max-width: 768px) {
-                display: initial;
-            }
-        }
-
-        .flex-item-max-content {
-            min-width: 50px;
-        }
-    
-        .introduction-flex-item {
-            margin-right: 30px;
-            @media screen and (max-width: 768px) {
-                margin-top: 30px;
-            }
-        }
-        .introduction-text {
-            max-width: 500px;
-        }
-        .introduction-text-margin {
-            margin: 40px 0;
-            @media screen and (max-width: 768px) {
-                margin: 0 20px;
-            }
-        }
-    
-        .powerbi-001 {
-            max-width: 1000px;
-            width: 100vw;
-            height: auto;
-            padding: 15px;
-            align-items: center;
-            background-color: black;
-            border-radius: 10px;
-            object-fit: contain;
-            @media screen and (max-width: 768px) {
-                width: 87vw;
-            }
-        }
-    
-        .powerbi-001-flex-container {
-            align-items: center;
-            display: flex;
-            margin: 0px 10px;
-            @media screen and (max-width: 768px) {
-                display: initial;
-            }
-        }
-    
-        .powerbi-001-flex-item {
-            width: 35%;
-            margin: 0 10px;
-            position: relative;
-            @media screen and (max-width: 768px) {
-                width: 100%;
-            }
-        }
-        .flex-item-left-margin {
-            max-width: 270px;
-            min-width: 100px;
-            margin-left: 10vw;
-            @media screen and (max-width: 768px) {
-                max-width: 400px;
-                margin-left: 14vw;
-            }
-        }
-
-        .result-list {
-            margin-top: 100px;
-        }
-        .result-list-width {
-            width: 1200px;
-            margin: 0 auto;
-        }
-
-        .grid-container {
-            width:auto;
-            height: auto;
-            display: grid;
-            place-items: center;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-areas: 
-                "item1 item2 item3 item4 item5";
-            @media screen and (max-width: 768px) {
-                grid-template-columns: repeat(5, 20vw);
-            }
-            
-        }
-        .grid-item {
-            justify-content: center;
-            align-items: center;
-            padding: 0 10px;
-        }
-        .grid-item img {
-            width: 200px;
-            height: 100px;
-            @media screen and (max-width: 768px) {
-                width: 100px;
-                height: 50px;
-            }
-            
-        }
-        .picture-1 {
-            grid-area: item1;
-        }
-        .picture-2 {
-            grid-area: item2;
-        }
-        .picture-3 {
-            grid-area: item3;
-        }
-        .picture-4 {
-            grid-area: item4;
-        }
-        .picture-5 {
-            grid-area: item5;
-        }
-
-        .picture-1-main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            @media screen and (max-width: 768px) {
-                display: initial;
-            }
-        }
-        .picture-1-main img {
-            max-width: 1200px;
-            width: 100vw;
-        }
-        .report-section {
-            margin-top: 60px;
-            padding: 30px 0;
-            background-color: #ebebeb;
-        }
-
-        .report-flex-container {
-            display: flex;
-            margin: 0 120px;
-            width: auto 1000px;
-            margin: 0 150px;
-            @media screen and (max-width: 768px) {
-                display: initial;
-            }
-        }
-        .report-flex-item-fsize {
-            font-size: 1.2rem;
-            padding: 0 50px;
-        }
-    
-        .report-flex-item {
-            margin: 0 20px;
-            align-items: left;
-            @media screen and (max-width: 768px) {
-                margin: 50px 20px;
-            }
-        }
-
-        .report-flex-text {
-            font-size: smaller;
-            width: auto 1000px;
-            margin: 0 150px;
-            @media screen and (max-width: 768px) {
-                margin: 0 15px;
-            }
-        }
-
-
-        .apply-section {
-            padding: 60px 0;
-        }
-
-        .apply-section  h1{
-            @media screen and (max-width: 768px) {
-                padding: 0 30px;
-            }
-        }
-
-        .responsive-bi {
-            margin: 0 150px;
-        }
-
-        .responsive-bi-container {
-            align-items: baseline;
-            margin-bottom: 100px;
-            @media screen and (max-width: 1068px) {
-                display: initial;
-            }
-        }
-
-        .responsive-bi-item {
-            max-width: 460px;
-            min-width: 460px;
-            height:fit-content;
-            border: 0.2px solid black;
-            padding: 10px 10px;
-            margin: 0 10px;
-            box-shadow: 0px 3px 10px #bbb;
-            @media screen and (max-width: 1068px) {
-                margin: 20px 0;
-            }
-        }
-
-        .responsive-bi-item h3, .responsive-bi-item p {
-            margin: 20px 30px;
-        }
-
-        .responsive-bi-item-align {
-            margin: 10px 100px;
-            align-items:baseline;
-        }
-
-        .responsive-bi-item img {
-            justify-content: center;
-            align-items: center;
-            width: 460px;
-
-            margin: 0;
-            padding: 0;
-            height: auto;
-        }
-
-
-        .simon {
-            max-width: 1120px;
-            width:fit-content;
-            @media screen and (max-width: 768px) {
-                max-width: 90vw;
-            }
-        }
-
-        .powerbi-examine {
-            max-width: 600px;
-        }
-
-        .app-store {
-            background-color: #75757a;
-            color: white;
-            padding: 60px 0;
-            margin: 10px 0;
-        }
-
-        .app-store h1, p{
-            @media screen and (max-width: 768px) {
-                margin: 15px 20px;
-            }
-        }
-
-        
-
-        .app-store-icon {
-            width: 50px;
-        }
-
-        .service-section {
-            padding: 60px 0;
-        }
-        .container-apply-baseline {
-            align-items: baseline;
-        }
-        .service-section-item {
-            width: 15vw;
-            margin: 0 8px;
-            @media screen and (max-width: 768px) {
-                width: 90vw;
-                margin-left: 10px;
-            }
-        }
-        .service-section-text {
-            width: auto 1000px;
-            margin: 0 150px;
-            @media screen and (max-width: 768px) {
-                margin: 0 15px;
-            }
-        }
-
-        .azure-section {
-            background-color: #3c3c41;
-            color: white;
-            padding: 60px 0;
-        }
-        .azure-section p {
-            width: auto 1000px;
-            margin: 0 150px;
-            @media screen and (max-width: 768px) {
-                margin: 0 15px;
-            }
-
-        }
-        .community-section {
-            background-color: #ebebeb;
-            padding: 60px 0;
-
-        }
-        .community-section img {
-            width: 50px;
-        }
-        .footer-background {
-            background-color: #f1f2f4;
-        }
-        .footnote-text {
-            width: auto 1000px;
-            margin: 0 150px;
-            padding-top: 60px;
-            font-size: smaller;
-        }
-        .footer-flex-container {
-            display: flex;
-            justify-content: center;
-            align-items: baseline;
-            padding: 20px 100px;
-            margin-top: 60px;
-            @media screen and (max-width: 768px) {
-                display: initial;
-            }
-
-        }
-        .footer-flex-item {
-            width: 16vw;
-            font-size: 16px;
-            padding: 0 3vw;
-            @media screen and (max-width: 768px) {
-                width: 500px;
-            }
-        }
-        .footer-flex-item a {
-            font-size: 13px;
-            text-decoration: underline;
-        }
-        .footer-flex-item-margin {
-            @media screen and (max-width: 768px) {
-                margin: 60px 0;
-            }
-        }
-
-        .footer-end-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0 7vw;
-            @media screen and (max-width: 768px) {
-                display: initial;
-            }
-        }
-        .footer-end-item {
-            font-size: 12px;
-            padding: 0;
-        }
-
-        .footer-end-item-empty {
-            padding: 0 10vw;
-        }
-
-        .footer-end-item-img {
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-end-item-img img {
-            width: 30px;
-            height: auto;
-            @media screen and (max-width: 768px) {
-                display: flex;
-            }
-
-        }
-        .footer-end-item-underline {
-            text-decoration: underline;
-        }
-
-        .dividing-line {
-            border-right: 1px solid #aaa;
-            @media screen and (max-width: 768px) {
-                border-bottom: 1px solid #aaa;
-                border-right: none;
-            }
-        }
-        .report-text {
-            padding-right: 50px;
-        }
-        .report-text-margin {
-            margin-top: 100px;
-
-        }
-        .report-read-button {
-            border: 1px solid black;
-            box-shadow: 0px 3px 3px #999;
-            border-radius: 2px;
-            padding: 12px;
-        }
-
-        .mobile-button-margin {
-            @media screen and (max-width: 768px) {
-                margin: 0 130px;
-            }
-        }
-        .report-read-button:hover {
-            color: white;
-            background-color: black;
-            transition: all 0.2s;
-        }
-
-
 
     </style>
 </head>
+
+<link rel="stylesheet" href="./css/main.css">
 
 
 <body>
     <div id="main-content">
         <nav class="topmenu">
+            <ul>
+                <div class="left-tab">
+                    <li><a href="#"><img src="./images/RE1Mu3b.png" width="auto" height="20px" alt="microsoft-logo"></a></li>
+                    <li><a href="#">Power BI</a></li>
+                    <li><a href="#">개요&nbsp<img width="10px" src="./images/free-icon-arrow-down-sign-to-navigate-32195.png" alt="arrow-down"></a>
+                        <ul class="submenu">
+                            <li><a href="#">Power BI란?</a></li>
+                            <li><a href="#">Power BI을(를) 사용해야 하는 이유</a></li>
+                            <li><a href="#">고객 사례</a></li>
+                            <li><a href="#">데이터 시각적 개체</a></li>
+                            <li><a href="#">보안</a></li>
+                            <li><a href="#">둘러보기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">제품&nbsp<img width="10px" src="./images/free-icon-arrow-down-sign-to-navigate-32195.png" alt="arrow-down"></a>
+                        <ul class="submenu">
+                            <li><a href="#">Power BI Desktop</a></li>
+                            <li><a href="#">Power BI Pro</a></li>
+                            <li><a href="#">Power BI Premium</a></li>
+                            <li><a href="#">Power BI 모바일</a></li>
+                            <li><a href="#">Power BI Embedded</a></li>
+                            <li><a href="#">Power BI Report Server</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">가격</a></li>
+                    <li><a href="#">솔루션&nbsp<img width="10px" src="./images/free-icon-arrow-down-sign-to-navigate-32195.png" alt="arrow-down"></a>
+                        <ul class="submenu">
+                            <li><a href="#">Azure + Power BI</a></li>
+                            <li><a href="#">Microsoft 365 + Power BI</a></li>
+                            <li><a href="#">Dynamics 365 + Power BI</a></li>
+                            <li><a href="#">산업별</a>>
+                                <ul class="submenu">
+                                    <li><a href="#">에너지</a></li>
+                                    <li><a href="#">의료서비스</a></li>
+                                    <li><a href="#">제조</a></li>
+                                    <li><a href="#">미디어</a></li>
+                                    <li><a href="#">소매</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">분석가용</a></li>
+                            <li><a href="#">IT용</a></li>
+                            <li><a href="#">개발자용</a>>
+                                <ul class="submenu">
+                                    <li><a href="#">개요</a></li>
+                                    <li><a href="#">임베디드 분석</a></li>
+                                    <li><a href="#">Power BI 시각적 개체</a></li>
+                                    <li><a href="#">자동화</a></li>
+                                    <li><a href="#">설명서</a></li>
+                                    <li><a href="#">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">리소스&nbsp<img width="10px" src="./images/free-icon-arrow-down-sign-to-navigate-32195.png" alt="arrow-down"></a>
+                        <ul class="submenu">
+                            <li><a href="#">시작하기</a></li>
+                            <li><a href="#">학습</a>>
+                                <ul class="submenu">
+                                    <li><a href="#">개요</a></li>
+                                    <li><a href="#">자가 주도형 학습</a></li>
+                                    <li><a href="#">웹 세미나</a></li>
+                                    <li><a href="#">설명서</a></li>
+                                    <li><a href="#">로드맵</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">지원</a>>
+                                <ul class="submenu">
+                                    <li><a href="#">개요</a></li>
+                                    <li><a href="#">문제</a></li>
+                                    <li><a href="#">피드백 제공</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">블로그</a></li>
+                            <li><a href="#">비즈니스 인텔리전스 항목</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">커뮤니티&nbsp<img width="10px" src="./images/free-icon-arrow-down-sign-to-navigate-32195.png" alt="arrow-down"></a>
+                        <ul class="submenu">
+                            <li><a href="#">개요</a></li>
+                            <li><a href="#">포럼</a></li>
+                            <li><a href="#">갤러리</a></li>
+                            <li><a href="#">아이디어 제출</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">사용자 그룹</a></li>
+                            <li><a href="#">커뮤니티 블로그</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="right-tab">
+                    <li><a href="#">검색&nbsp<img width="15px" src="./images/pngegg.png" alt="arrow-down"></a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">무료 체험</a></li>
+                    <li class="black-button"><a href="#">지금 구입</a></li>
+
+                </div>
+                
+            </ul>
+        </nav>
+
+
+        <!-- <nav class="topmenu">
             <div class="left-tab">
                 <li class="topmenu-item white-button microsoft-logo"><a href="#"><img src="./images/RE1Mu3b.png" width="auto" height="20px" alt="microsoft-logo"></a></li>
                 <li class="topmenu-item white-button">|&nbsp&nbsp&nbsp&nbsp&nbsp<a href="#">Power BI</a></li>
@@ -655,8 +171,7 @@
                 <li class="topmenu-item white-button"><a href="#">무료 체험</a></li>
                 <li class="topmenu-item black-button"><a href="#">지금 구입</a></li>
             </div>
-            <!-- 드롭 다운 메뉴 필요 -->
-        </nav>
+        </nav> -->
 
         <!-- --------------- -->
 
